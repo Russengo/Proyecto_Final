@@ -1,0 +1,170 @@
+/* =======================================================
+ * LOGIN ADAPTADO AL ESTILO DEL REGISTER + MEDIA QUERIES
+ * ======================================================= */
+
+/* Contenedor principal */
+.login-container {
+  max-width: 400px;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Títulos */
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  text-align: center;
+  color: #15803d;
+  margin-bottom: 0.3rem;
+}
+
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  text-align: center;
+  color: #374151;
+  margin-bottom: 0.5rem;
+}
+
+.text-muted {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+/* Card del formulario */
+.form-card {
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Inputs y labels */
+.form-label {
+  display: block;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 0.3rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+}
+
+/* Botón */
+button[type="submit"] {
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 1.5rem;
+  background: #15803d;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.3s, transform 0.1s;
+}
+
+button[type="submit"]:hover {
+  background: #166534;
+  transform: scale(1.02);
+}
+
+/* Errores */
+.error {
+  color: #dc2626;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Flex para checkbox y link */
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+}
+
+input[type="checkbox"] {
+  accent-color: #15803d;
+}
+
+/* Links */
+.link {
+  font-family: 'Inter', sans-serif;
+  color: #15803d;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* =======================================================
+ * MEDIA QUERIES
+ * ======================================================= */
+
+@media (min-width: 601px) {
+  .login-container {
+    max-width: 500px;
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .login-container {
+    max-width: 450px; /* evitar que se vea enorme en pantallas grandes */
+    padding: 2.5rem;
+  }
+
+  .form-input {
+    font-size: 1rem;
+    padding: 0.7rem;
+  }
+
+  button[type="submit"] {
+    font-size: 1.05rem;
+    padding: 0.85rem;
+  }
+}
+
+.swal-title,
+.swal-text,
+.swal-button {
+  font-family: 'Inter', sans-serif !important;
+}
+

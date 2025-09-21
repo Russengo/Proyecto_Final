@@ -34,13 +34,17 @@ export class LoginComponent {
     this.authService.login(nombre, password).subscribe({
       next: (res: any) => {
         if (res.token) {
+          // Guardamos token, nombre y rol
           this.authService.setToken(res.token);
+          localStorage.setItem('usuario', JSON.stringify({ nombre: nombre, rol: res.rol }));
+
           Swal.fire({
             title: '¡Éxito!',
             text: 'Login realizado correctamente',
             icon: 'success',
             confirmButtonText: 'Aceptar'
           }).then(() => {
+            // Redirigimos al dashboard
             this.router.navigate(['/dashboard']);
           });
         }

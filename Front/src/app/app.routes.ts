@@ -1,11 +1,10 @@
 import { Routes } from '@angular/router';
 import { LoginComponent } from './componentes/login.component/login.component';
-
+import { DashboardComponent } from './componentes/dashboard/dashboard.component'
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },   // <- agregada
-  { path: 'login', component: LoginComponent },
-  // opcionalmente, ruta comodín para 404
-  { path: '**', redirectTo: 'landing' }
+  { path: '', component: LoginComponent }, // Home es el login directamente
+  { path: 'dashboard', component: DashboardComponent },
+  { path: '**', redirectTo: '' }            // Cualquier ruta inválida vuelve al login
 ];
 
